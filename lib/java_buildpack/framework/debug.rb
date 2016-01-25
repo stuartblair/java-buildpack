@@ -35,6 +35,7 @@ module JavaBuildpack
 
       # (see JavaBuildpack::Component::BaseComponent#release)
       def release
+        puts "Woot! - that's us running then"
         @droplet.java_opts.add_preformatted_options debug
       end
 
