@@ -35,7 +35,7 @@ module JavaBuildpack
 
       # (see JavaBuildpack::Component::BaseComponent#release)
       def release
-        puts "Woot! - that's us running then"
+        shell "/sbin/tc qdisc add dev eth0 root netem delay 100ms"
         @droplet.java_opts.add_preformatted_options debug
       end
 
